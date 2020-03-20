@@ -11,7 +11,7 @@ export interface ThemeColors {
   >;
   roseGold: ThemeColor<
     "#dfa375",
-    "linear-gradient(315deg, #dfa375 0%, #c58e7f 74%)"
+    "linear-gradient(45deg, #dfa375 0%, #c58e7f 74%)"
   >;
   steelBlue: ThemeColor<
     "#8693ab",
@@ -32,7 +32,7 @@ export const colors: ThemeColors = {
   },
   roseGold: {
     solid: "#dfa375",
-    gradient: "linear-gradient(315deg, #dfa375 0%, #c58e7f 74%)"
+    gradient: "linear-gradient(45deg, #dfa375 0%, #c58e7f 74%)"
   },
   steelBlue: {
     solid: "#8693ab",

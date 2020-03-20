@@ -1,7 +1,7 @@
 import React from "react";
-import { withTheme, ITheme } from "styled-components";
+import { withTheme, DefaultTheme } from "styled-components";
 
-const App: React.FC<{ theme: ITheme }> = ({ theme }): JSX.Element => (
+const App: React.FC<{ theme: DefaultTheme }> = ({ theme }): JSX.Element => (
   <h1 style={{ color: theme.colors.gold.solid }}>Hello WORLD</h1>
 );
 
