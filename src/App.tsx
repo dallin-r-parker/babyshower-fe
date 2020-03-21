@@ -1,8 +1,14 @@
 import React from "react";
-import { withTheme, DefaultTheme } from "styled-components";
+import { Container } from "./components/Container";
+import { Box } from "./components/Box";
 
-const App: React.FC<{ theme: DefaultTheme }> = ({ theme }): JSX.Element => (
-  <h1 style={{ color: theme.colors.gold.solid }}>Hello WORLD</h1>
+const App: React.FC = (): JSX.Element => (
+  <Container flex h="100vh" w="100vw">
+    <Box h="60vh" w="45vw" opacity={0.4} bgc="steelBlue">
+      <h1>RSVP</h1>
+      <input type="text" />
+    </Box>
+  </Container>
 );
 
-export default withTheme(App);
+export default App;
