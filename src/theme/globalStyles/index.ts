@@ -3,12 +3,19 @@ import { CSSReset } from "./CSSReset";
 
 //TODO: probably readdress to not be on the HTML/Body container
 
-const animate = keyframes`0% {
+const animate = keyframes`
+0% {
   background-position: 0% 50%;
 }
+
+25% {
+  background-position: 25% 75%
+}
+
 50% {
   background-position: 100% 50%;
 }
+
 100% {
   background-position: 0% 50%;
 }`;
@@ -18,9 +25,9 @@ export const GlobalStyles = createGlobalStyle`
 
   html, body {
     color: black;
-    background-image: linear-gradient(64deg,#eabc99 0%,#d27d67 74%);
-    background-size: 400% 400%;
-    animation: ${animate} 15s ease infinite;
+    background-image: linear-gradient(-45deg,#d4a17a,#e4a26f,#d29668,#d27d67);
+    background-size: 250% 250%;
+    animation: ${animate} 15s ease-in-out infinite;
   }
 
   h1 {
@@ -49,3 +56,8 @@ export const GlobalStyles = createGlobalStyle`
     font-family: inherit;
   }
 `;
+
+// color: black;
+// background-image: linear-gradient(64deg,#eabc99 0%,#d27d67 74%);
+// background-size: 250% 250%;
+// animation: ${animate} 15s ease infinite;
