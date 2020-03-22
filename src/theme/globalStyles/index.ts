@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
   ${CSSReset}
 
   html, body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Assistant', sans-serif;
     height: 100vh;
     width: 100vw;
     color: black;
