@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+//NOTE: changing the NUMBER in the "tranform" will make the star "skewed"
+
 export const Star = styled.i`
   position: relative;
 
