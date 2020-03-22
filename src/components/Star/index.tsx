@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 //NOTE: changing the NUMBER in the "tranform" will make the star "skewed"
 
@@ -21,7 +21,7 @@ export const Star = styled.div`
   font-size: 24px;
 
   &:before {
-    content: "";
+    content: '';
 
     display: block;
     width: 0;
@@ -39,7 +39,7 @@ export const Star = styled.div`
   }
 
   &:after {
-    content: "";
+    content: '';
 
     display: block;
     width: 0;

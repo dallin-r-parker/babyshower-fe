@@ -1,7 +1,7 @@
-import React from "react";
-import { Container } from "./components/Container";
-import { Box } from "./components/Box";
-import { Star } from "components/Star";
+import React from 'react';
+import { Container } from './components/Container';
+import { Box } from './components/Box';
+import { Star } from 'components/Star';
 
 const App: React.FC = (): JSX.Element => (
   <Container flex h="100vh" w="100vw" jc="center">

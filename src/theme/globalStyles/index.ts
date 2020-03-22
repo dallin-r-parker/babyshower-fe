@@ -1,5 +1,5 @@
-import { createGlobalStyle, keyframes } from "styled-components";
-import { CSSReset } from "./CSSReset";
+import { createGlobalStyle, keyframes } from 'styled-components';
+import { CSSReset } from './CSSReset';
 
 //TODO: probably readdress to not be on the HTML/Body container
 // TODO: refactor for better performance css

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface Props {
   h: string;
@@ -13,10 +13,10 @@ interface Props {
 }
 
 export const Container = styled.section<Props>`
-  display: ${({ flex }) => flex && "flex"};
+  display: ${({ flex }) => flex && 'flex'};
   width: ${({ w }) => w};
   height: ${({ h }) => h};
-  justify-content: ${({ jc }) => jc && "center"};
+  justify-content: ${({ jc }) => jc && 'center'};
   padding: ${({ p }) => p && `${p}px`};
   border-radius: ${({ br }) => br && `${br}px`};
   background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].solid};

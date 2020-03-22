@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { themeColors } from "theme/colors";
+import styled from 'styled-components';
+import { themeColors } from 'theme/colors';
 
 interface Props {
   h: string;
