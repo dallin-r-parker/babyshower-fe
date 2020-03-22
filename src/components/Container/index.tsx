@@ -19,6 +19,6 @@ export const Container = styled.section<Props>`
   justify-content: ${({ jc }) => jc && 'center'};
   padding: ${({ p }) => p && `${p}px`};
   border-radius: ${({ br }) => br && `${br}px`};
-  background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].solid};
+  background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].hex};
   ${({ fd, flex }) => flex && fd && `flex-direction: ${fd}`};
 `;

@@ -8,13 +8,15 @@ interface Props {
   p?: number;
   bgc?: themeColors;
   opacity?: number;
+  mt?: number;
 }
 
 export const Box = styled.div<Props>`
   width: ${({ w }) => w};
   height: ${({ h }) => h};
   padding: ${({ p }) => p && `${p}px`};
-  opacity: ${({ opacity }) => opacity && opacity};
   border-radius: ${({ theme }) => `${theme.br}px`};
-  background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].solid};
+  margin-top: ${({ mt }) => `${mt}vh`};
+  background-color: ${({ theme, bgc, opacity }) =>
+    opacity ? `rgba(${theme.colors[bgc].rgb}, ${opacity})` : theme.colors[bgc].hex};
 `;
