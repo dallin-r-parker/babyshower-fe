@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+//NOTE: this might be better named "Section"
+
 interface Props {
   h: string;
   w: string;
@@ -7,7 +9,7 @@ interface Props {
   br?: number;
   bgc?: string;
   flex?: boolean;
-  fd?: boolean;
+  fd?: string;
   jc?: CSS.JustifyConent;
   center?: boolean;
 }

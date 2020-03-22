@@ -1,5 +1,6 @@
 import { createGlobalStyle, keyframes } from 'styled-components';
 import { CSSReset } from './CSSReset';
+import { colors } from 'theme/colors';
 
 //TODO: probably readdress to not be on the HTML/Body container
 // TODO: refactor for better performance css
@@ -29,12 +30,13 @@ export const GlobalStyles = createGlobalStyle`
   ${CSSReset}
 
   html, body {
+    font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     width: 100vw;
     color: black;
     background-image: linear-gradient(-45deg,#d4a17a,#e4a26f,#e8906e,#d27d67);
     background-size: 250% 250%;
-    animation: ${animate} 15s ease-in-out infinite;
+    animation: ${animate} 15s ease infinite;
   }
 
   h1 {
@@ -62,4 +64,6 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 16px;
     font-family: inherit;
   }
+
+
 `;
