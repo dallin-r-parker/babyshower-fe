@@ -1,7 +1,12 @@
-import { createGlobalStyle, keyframes } from "styled-components";
-import { CSSReset } from "./CSSReset";
+import { createGlobalStyle, keyframes } from 'styled-components';
+import { CSSReset } from './CSSReset';
 
 //TODO: probably readdress to not be on the HTML/Body container
+// TODO: refactor for better performance css
+
+//NOTE: the backround gradient might be better as a "nightsky" or silver base?
+// background: radial-gradient(ellipse at bottom,  rgb(9,76,114) 0%,rgb(1,41,63) 100%);
+// URL to codepen example https://tinyurl.com/sqxeqfh
 
 const animate = keyframes`
 0% {
@@ -24,8 +29,10 @@ export const GlobalStyles = createGlobalStyle`
   ${CSSReset}
 
   html, body {
+    height: 100vh;
+    width: 100vw;
     color: black;
-    background-image: linear-gradient(-45deg,#d4a17a,#e4a26f,#d29668,#d27d67);
+    background-image: linear-gradient(-45deg,#d4a17a,#e4a26f,#e8906e,#d27d67);
     background-size: 250% 250%;
     animation: ${animate} 15s ease-in-out infinite;
   }
@@ -56,8 +63,3 @@ export const GlobalStyles = createGlobalStyle`
     font-family: inherit;
   }
 `;
-
-// color: black;
-// background-image: linear-gradient(64deg,#eabc99 0%,#d27d67 74%);
-// background-size: 250% 250%;
-// animation: ${animate} 15s ease infinite;

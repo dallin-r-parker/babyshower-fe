@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -16,7 +17,8 @@
     "jsx": "react",
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "typeRoots": ["node_modules/@types", "src/types/"]
   },
   "include": ["src", "scripts", "./src/global"],
   "exclude": ["node_modules", "public"]
