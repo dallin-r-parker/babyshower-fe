@@ -9,9 +9,9 @@ const animate = keyframes`
   background-position: 0% 50%;
 }
 
-/* 25% {
+25% {
   background-position: 25% 75%
-} */
+}
 
 50% {
   background-position: 100% 50%;

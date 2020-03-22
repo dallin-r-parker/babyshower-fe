@@ -7,18 +7,20 @@ interface Props {
   br?: number;
   bgc?: string;
   flex?: boolean;
-  fd?: string;
+  fd?: boolean;
+  jc?: CSS.JustifyConent;
   center?: boolean;
   extend?: (theme: DefaultTheme) => string;
 }
-export const Container = styled.div<Props>`
-  ${({ flex }) => flex && "display: flex"};
+
+export const Container = styled.section<Props>`
+  display: ${({ flex }) => flex && "flex"};
   width: ${({ w }) => w};
   height: ${({ h }) => h};
+  justify-content: ${({ jc }) => jc && "center"};
   padding: ${({ p }) => p && `${p}px`};
   border-radius: ${({ br }) => br && `${br}px`};
   background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].solid};
-  justify-content: center;
   ${({ fd, flex }) => flex && fd && `flex-direction: ${fd}`};
   ${({ theme, extend }) => extend && extend(theme)};
 `;
