@@ -19,4 +19,5 @@ export const Box = styled.div<Props>`
   margin-top: ${({ mt }) => `${mt}vh`};
   background-color: ${({ theme, bgc, opacity }) =>
     opacity ? `rgba(${theme.colors[bgc].rgb}, ${opacity})` : theme.colors[bgc].hex};
+  box-shadow: 0 1px 6px 0 rgba(95, 95, 95, 0.54);
 `;

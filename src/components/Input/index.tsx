@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ErrorMessage } from 'components/ErrorMessage';
 
 interface Props {
   errors: any;
   name: string;
   label: string;
   register: any;
-  placeholder: string;
   autofocus?: boolean;
   validate?: any;
 }
@@ -21,12 +19,7 @@ export const Input: React.FC<Props> = (props): JSX.Element => {
   return (
     <Wrapper error={props.errors[props.name]}>
       <label>Enter {props.label}:</label>
-      <input
-        name={props.name}
-        placeholder={props.placeholder}
-        ref={props.register(options)}
-        autoFocus={props.autofocus}
-      />
+      <input name={props.name} ref={props.register(options)} autoFocus={props.autofocus} />
     </Wrapper>
   );
 };

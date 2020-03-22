@@ -34,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100vw;
     color: black;
     background-image: linear-gradient(-45deg,#d4a17a,#e4a26f,#e8906e,#d27d67);
-    background-size: 250% 250%;
+    background-size: 300% 300%;
     animation: ${animate} 15s ease infinite;
   }
 

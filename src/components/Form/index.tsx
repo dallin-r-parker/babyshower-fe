@@ -15,22 +15,16 @@ export const Form: React.FC = (): JSX.Element => {
     <>
       {/* <h2>RSVP</h2> */}
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          name="fullname"
-          label="Full Name"
-          placeholder="John Doe"
-          register={register}
-          errors={errors}
-          autofocus
-        />
+        <Input name="fullname" label="Full Name" register={register} errors={errors} autofocus />
         <Input
           name="email"
           label="Email"
           errors={errors}
           validate={{ pattern: /^\S+@\S+$/i }}
           register={register}
-          placeholder="example@gmail.com"
         />
+        <Input name="favStar" label="your favorite constellation" errors={errors} register={register} />
+        <Input name="celebTwin" label="your celebrity looka-like" errors={errors} register={register} />
         <ErrorMessage error={errors} />
         <input type="submit" />
       </form>
