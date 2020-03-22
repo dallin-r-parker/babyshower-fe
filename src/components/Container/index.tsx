@@ -1,4 +1,4 @@
-import styled, { DefaultTheme } from "styled-components";
+import styled from "styled-components";
 
 interface Props {
   h: string;
@@ -10,7 +10,6 @@ interface Props {
   fd?: boolean;
   jc?: CSS.JustifyConent;
   center?: boolean;
-  extend?: (theme: DefaultTheme) => string;
 }
 
 export const Container = styled.section<Props>`
@@ -22,5 +21,4 @@ export const Container = styled.section<Props>`
   border-radius: ${({ br }) => br && `${br}px`};
   background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].solid};
   ${({ fd, flex }) => flex && fd && `flex-direction: ${fd}`};
-  ${({ theme, extend }) => extend && extend(theme)};
 `;
