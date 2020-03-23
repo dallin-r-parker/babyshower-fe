@@ -13,7 +13,6 @@ export const Form: React.FC = (): JSX.Element => {
 
   return (
     <>
-      {/* <h2>RSVP</h2> */}
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input name="fullname" label="Full Name" register={register} errors={errors} autofocus />
         <Input
@@ -28,6 +27,7 @@ export const Form: React.FC = (): JSX.Element => {
         <ErrorMessage error={errors} />
         <Button type="submit" h="15px" w="100px" bgc="white" color="roseGold" />
       </form>
+      <h4 style={{ paddingTop: `10px` }}>Submit this form to receive a confirmation/instruction email </h4>
     </>
   );
 };

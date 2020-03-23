@@ -16,6 +16,7 @@ interface Props {
   z?: string;
   oy?: string;
   ox?: string;
+  m?: string;
 }
 
 export const Container = styled.section<Props>`
@@ -24,6 +25,7 @@ export const Container = styled.section<Props>`
   height: ${({ h }) => h};
   justify-content: ${({ jc }) => jc && 'center'};
   padding: ${({ p }) => p && `${p}px`};
+  margin: ${({ m }) => m};
   border-radius: ${({ br }) => br && `${br}px`};
   background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].hex};
   position: ${({ pos }) => pos};
