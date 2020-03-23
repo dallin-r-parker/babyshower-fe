@@ -1,20 +1,4 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { Container } from '../Container';
-import { colors } from 'theme/colors';
-
-const animate = keyframes`
-0% {
-    color: ${colors.gold.gradient};
-}
-
-40% {
-    color:${colors.white.hex};
-}
-
-100% {
-    color: ${colors.gold.gradient};
-}`;
 
 export const Registry: React.FC = (): JSX.Element => (
   <>
