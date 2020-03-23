@@ -1,15 +1,22 @@
 import styled from 'styled-components';
 
-export const Cloud = styled.div`
+interface Props {
+  t: string;
+  r: string;
+}
+
+export const Cloud = styled.div<Props>`
   margin-top: 100px;
   background: #fff;
   background: linear-gradient(top, #fff 5%, #f1f1f1 100%);
   border-radius: 100px;
   box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
 
-  height: 120px;
-  position: relative;
-  width: 350px;
+  height: 12vh;
+  width: 35vh;
+  position: absolute;
+  top: ${({ t }) => t && `${t}vh`};
+  right: ${({ r }) => r && `${r}vw`};
 
   &:after,
   &:before {

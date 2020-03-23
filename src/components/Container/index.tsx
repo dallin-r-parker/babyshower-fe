@@ -12,6 +12,8 @@ interface Props {
   jc?: CSS.JustifyConent;
   center?: boolean;
   bp?: string;
+  pos?: string;
+  z?: string;
 }
 
 export const Container = styled.section<Props>`
@@ -22,6 +24,8 @@ export const Container = styled.section<Props>`
   padding: ${({ p }) => p && `${p}px`};
   border-radius: ${({ br }) => br && `${br}px`};
   background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].hex};
+  position: ${({ pos }) => pos};
+  z-index: ${({ z }) => z};
   ${({ fd, flex }) => flex && fd && `flex-direction: ${fd}`};
   ${({ theme, bp }) =>
     theme.breakpoints[bp] && `@media (max-width: ${theme.breakpoints[bp]}){width: 90vw; height: 80vh}`};
