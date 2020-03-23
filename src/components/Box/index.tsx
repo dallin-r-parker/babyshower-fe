@@ -9,6 +9,7 @@ interface Props {
   bgc?: themeColors;
   opacity?: number;
   mt?: number;
+  bp?: string;
 }
 
 export const Box = styled.div<Props>`
@@ -20,4 +21,5 @@ export const Box = styled.div<Props>`
   background-color: ${({ theme, bgc, opacity }) =>
     opacity ? `rgba(${theme.colors[bgc].rgb}, ${opacity})` : theme.colors[bgc].hex};
   box-shadow: ${({ theme }) => theme.boxShadow};
+  ${({ theme, bp }) => theme.breakpoints[bp] && `@media (max-width: ${theme.breakpoints[bp]}){width: 90vw}`};
 `;

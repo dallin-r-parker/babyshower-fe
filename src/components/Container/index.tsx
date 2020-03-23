@@ -16,12 +16,12 @@ interface Props {
 
 export const Container = styled.section<Props>`
   display: ${({ flex }) => flex && 'flex'};
-  width: w;
+  width: ${({ w }) => w};
   height: ${({ h }) => h};
   justify-content: ${({ jc }) => jc && 'center'};
   padding: ${({ p }) => p && `${p}px`};
   border-radius: ${({ br }) => br && `${br}px`};
   background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].hex};
   ${({ fd, flex }) => flex && fd && `flex-direction: ${fd}`};
-  ${({ theme, bp }) => theme.breakpoints[bp] && `@media (min-width: ${theme.breakpoints[bp]}){width: 90vw}`};
+  ${({ theme, bp }) => theme.breakpoints[bp] && `@media (max-width: ${theme.breakpoints[bp]}){width: 90vw}`};
 `;
