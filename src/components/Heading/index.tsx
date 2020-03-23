@@ -22,25 +22,12 @@ export const CursiveStyle = styled.h1`
   font-size: 80px;
   color: gold;
   transform: rotate(330deg);
-  top: -100px;
-  left: 10vw;
+  top: -10vw;
+  left: -10vw;
   z-index: 13;
   animation: ${animate} 4s infinite alternate-reverse;
 
-  ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){width: 90vw; top:50px;
-  left: -2vw; transform: rotate(350deg);}`};
-  @keyframes mymove {
-    0% {
-      top: 0px;
-      background: red;
-      width: 100px;
-    }
-    100% {
-      top: 200px;
-      background: yellow;
-      width: 300px;
-    }
-  }
+  ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){transform: rotate(350deg);}`};
 `;
 
 export const CustomTable = styled.table`
@@ -50,8 +37,8 @@ export const CustomTable = styled.table`
   background-color: white;
   opacity: 0.65;
   font-size: 22px;
-  padding: 0px 20px;
-  ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){width: 90vw}`};
+  padding: 0px 40px;
+  ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){width: 90%}`};
   &&& {
     table,
     th,
@@ -74,8 +61,8 @@ export const CustomTable = styled.table`
 `;
 
 export const Heading: React.FC = (): JSX.Element => (
-  <Container h="auto" w="auto" jc="center" z="13" p={20}>
-    <h1 style={{ textAlign: 'center', fontWeight: `bold` }}>
+  <Container h="auto" w="auto" jc="center" z="13">
+    <h1 style={{ textAlign: 'center', fontWeight: `bold`, paddingTop: `20px`, paddingBottom: `20px` }}>
       twinkle,
       <br /> twinkle, <br />
       little star
@@ -83,7 +70,6 @@ export const Heading: React.FC = (): JSX.Element => (
     <h2 style={{ textAlign: 'center', padding: '10px', fontFamily: `Sacramento`, fontSize: `32px` }}>
       you're invited{' '}
     </h2>
-
     <CustomTable>
       <tr>
         <th>WHAT:</th>
@@ -112,11 +98,10 @@ export const Heading: React.FC = (): JSX.Element => (
         <th>HOW:</th>
         <td>
           Google Hangouts. Contact Dallin (
-          <a href="mailto: dallin.r.parker@gmail.com">dallin.r.parker@gmail.com </a>) if you need help setting
+          <a href="mailto: dallin.r.parker@gmail.com">dallin.r.parker@gmail.com</a>) if you need help setting
           up your personal device.
         </td>
       </tr>
     </CustomTable>
-    <CursiveStyle>RSVP</CursiveStyle>
   </Container>
 );

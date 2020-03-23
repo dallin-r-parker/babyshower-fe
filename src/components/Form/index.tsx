@@ -4,6 +4,7 @@ import { Input } from 'components/Input';
 import { ErrorMessage } from 'components/ErrorMessage';
 import { Button } from 'components/Button';
 import { setData } from 'service/firebase/db';
+import { CursiveStyle } from 'components/Heading';
 
 export const Form: React.FC = (): JSX.Element => {
   const { register, handleSubmit, errors, setError } = useForm();
@@ -13,6 +14,7 @@ export const Form: React.FC = (): JSX.Element => {
 
   return (
     <>
+      <CursiveStyle>RSVP</CursiveStyle>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input name="fullname" label="Full Name" register={register} errors={errors} autofocus />
         <Input

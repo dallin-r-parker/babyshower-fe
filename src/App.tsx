@@ -10,7 +10,7 @@ const App: React.FC = (): JSX.Element => (
     <Decorations />
     <Heading />
     <Container m="20px auto" h="auto" w="auto" flex fd="column" z="2">
-      <Box h="fit-content" w="45vw" bgc="steelBlue" opacity={0.7} mt={5} p={50} bp="tablet">
+      <Box h="fit-content" w="45vw" bgc="steelBlue" opacity={0.7} mt={10} p={40} bp="tablet">
         <Form />
       </Box>
     </Container>
