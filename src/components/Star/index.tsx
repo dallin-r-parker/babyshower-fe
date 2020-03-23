@@ -9,7 +9,6 @@ export const Star = styled.div<Props>`
   position: absolute;
   top: ${({ t }) => t && `${t}vh`};
   right: ${({ r }) => r && `${r}vw`};
-
   width: 0;
   height: 0;
   margin-left: 0.9em;
@@ -20,8 +19,7 @@ export const Star = styled.div<Props>`
   border-left: 0.3em solid transparent;
 
   /* Controlls the size of the stars. */
-  font-size: 24px;
-
+  font-size: 22px;
   &:before {
     content: '';
 
@@ -56,23 +54,5 @@ export const Star = styled.div<Props>`
     border-left: 1em solid transparent;
 
     transform: rotate(35deg);
-  }
-
-  @keyframes blink-medium {
-    0% {
-      box-shadow: $bxshadow-medium;
-    }
-    70% {
-      $colors: '#fff', 'transparent';
-      $stars: $bxshadow-medium;
-      @for $i from 1 to length($stars) {
-        $star: set-nth(nth($stars, $i), 3, unquote(nth($colors, random(length($colors)))));
-        $stars: set-nth($stars, $i, $star);
-      }
-      box-shadow: $stars;
-    }
-    100% {
-      box-shadow: $bxshadow-medium;
-    }
   }
 `;

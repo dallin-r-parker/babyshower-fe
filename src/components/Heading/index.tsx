@@ -67,7 +67,15 @@ export const Heading: React.FC = (): JSX.Element => (
       <br /> twinkle, <br />
       little star
     </h1>
-    <h2 style={{ textAlign: 'center', padding: '10px', fontFamily: `Sacramento`, fontSize: `32px` }}>
+    <h2
+      style={{
+        textAlign: 'center',
+        padding: '10px',
+        paddingBottom: '30px',
+        fontFamily: `Sacramento`,
+        fontSize: `40px`
+      }}
+    >
       you're invited{' '}
     </h2>
     <CustomTable>
