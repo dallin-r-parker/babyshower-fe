@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 //NOTE: this might be better named "Section"
 
 interface Props {
@@ -12,15 +11,17 @@ interface Props {
   fd?: string;
   jc?: CSS.JustifyConent;
   center?: boolean;
+  bp?: string;
 }
 
 export const Container = styled.section<Props>`
   display: ${({ flex }) => flex && 'flex'};
-  width: ${({ w }) => w};
+  width: w;
   height: ${({ h }) => h};
   justify-content: ${({ jc }) => jc && 'center'};
   padding: ${({ p }) => p && `${p}px`};
   border-radius: ${({ br }) => br && `${br}px`};
   background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].hex};
   ${({ fd, flex }) => flex && fd && `flex-direction: ${fd}`};
+  ${({ theme, bp }) => theme.breakpoints[bp] && `@media (min-width: ${theme.breakpoints[bp]}){width: 90vw}`};
 `;
