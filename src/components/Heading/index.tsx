@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import { Container } from '../Container';
 
 export const CursiveStyle = styled.h1`
-  position: absolute;
+  position: relative;
   font-family: Sacramento;
   font-size: 80px;
   color: gold;
   transform: rotate(330deg);
-  top: 100px;
+  top: -100px;
+  left: 10vw;
+  z-index: 13;
+  ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){width: 90vw; top: 20px;
+  left: -2vw; transform: rotate(350deg);}`};
 `;
 
 export const CustomTable = styled.table`
@@ -40,12 +44,14 @@ export const CustomTable = styled.table`
 `;
 
 export const Heading: React.FC = (): JSX.Element => (
-  <Container h="100vh" w="100vw" jc="center" pos="relative" z="1">
-    <h2>
-      twinkle, <br /> twinkle, <br />
+  <Container h="100vh" w="100vw" jc="center" pos="relative" z="13">
+    <h1 style={{ textAlign: 'center', padding: '20px', paddingTop: '120px', fontWeight: `bold` }}>
+      twinkle,
+      <br /> twinkle, <br />
       little star
-    </h2>
-    <h2>you're invited </h2>
+    </h1>
+    <h2 style={{ textAlign: 'center' }}>you're invited </h2>
+
     <CustomTable>
       <tr>
         <th>WHAT:</th>
