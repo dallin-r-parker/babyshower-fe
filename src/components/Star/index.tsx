@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 //NOTE: changing the NUMBER in the "tranform" will make the star "skewed"
-
-export const Star = styled.div`
-  position: relative;
-
+interface Props {
+  t: string;
+  r: string;
+}
+export const Star = styled.div<Props>`
+  position: absolute;
+  top: ${({ t }) => t && `${t}vh`};
+  right: ${({ r }) => r && `${r}vw`};
   display: inline-block;
   width: 0;
   height: 0;

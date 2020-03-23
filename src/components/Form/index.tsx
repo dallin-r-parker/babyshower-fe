@@ -24,7 +24,7 @@ export const Form: React.FC = (): JSX.Element => {
           register={register}
         />
         <Input name="favStar" label="your favorite constellation" errors={errors} register={register} />
-        <Input name="celebTwin" label="your celebrity looka-like" errors={errors} register={register} />
+        <Input name="celebTwin" label="your celebrity look-alike" errors={errors} register={register} />
         <ErrorMessage error={errors} />
         <Button type="submit" h="15px" w="100px" bgc="darkGray" />
       </form>
