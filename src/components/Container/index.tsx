@@ -14,6 +14,8 @@ interface Props {
   bp?: string;
   pos?: string;
   z?: string;
+  oy?: string;
+  ox?: string;
 }
 
 export const Container = styled.section<Props>`
@@ -29,4 +31,6 @@ export const Container = styled.section<Props>`
   ${({ fd, flex }) => flex && fd && `flex-direction: ${fd}`};
   ${({ theme, bp }) =>
     theme.breakpoints[bp] && `@media (max-width: ${theme.breakpoints[bp]}){width: 90vw; height: 80vh}`};
+  overflow-y: ${({ oy }) => oy};
+  overflow-x: ${({ ox }) => ox};
 `;

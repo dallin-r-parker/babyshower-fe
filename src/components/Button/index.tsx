@@ -6,6 +6,7 @@ interface Props {
   w?: string;
   type?: string;
   bgc: themeColors;
+  color?: themeColors;
 }
 
 export const Button = styled.input<Props>`
@@ -13,7 +14,7 @@ export const Button = styled.input<Props>`
   height: ${({ h }) => h}; */
   font-family: 'Assistant', sans-serif;
   background: ${({ theme, bgc }) => theme.colors[bgc].hex};
-  color: white;
+  color: ${({ theme, color }) => theme.colors[color].hex || `white`};
   text-transform: uppercase;
   border: none;
   margin-top: 10px;

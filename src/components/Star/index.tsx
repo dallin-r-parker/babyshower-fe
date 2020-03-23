@@ -9,10 +9,9 @@ export const Star = styled.div<Props>`
   position: absolute;
   top: ${({ t }) => t && `${t}vh`};
   right: ${({ r }) => r && `${r}vw`};
-  display: inline-block;
+
   width: 0;
   height: 0;
-
   margin-left: 0.9em;
   margin-right: 0.9em;
   margin-bottom: 1.2em;
