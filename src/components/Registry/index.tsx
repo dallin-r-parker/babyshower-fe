@@ -7,12 +7,20 @@ export const Registry: React.FC = (): JSX.Element => (
         textAlign: 'center',
         padding: '10px',
         paddingBottom: '30px',
-        fontSize: `24px`
+        fontSize: `22px`
       }}
     >
-      Find the registry for <br />
       <span style={{ fontFamily: 'Sacramento', fontSize: `30px` }}>Mikayda & Dallin</span> <br />
-      on <a href="https://www.babylist.com/baby-reg-mikayda">Babylist</a>
+      are registered here:
+      <br />
+      <br />
+      <a href="https://www.babylist.com/baby-reg-mikayda" target="blank">
+        <img
+          alt=""
+          height="30"
+          src="https://res.cloudinary.com/babylist/image/upload/f_auto,q_auto/v1547580354/Babylist_logo_horizontal_oawglq.png"
+        />
+      </a>
     </h2>
   </>
 );
