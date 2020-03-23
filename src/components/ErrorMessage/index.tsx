@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const ErrorMessage: React.FC<{ error: any }> = ({ error }): JSX.Element => {
+  console.log(`errors: `, error);
   const { length } = Object.keys(error);
   const errorMessage = `* One${!!length && length > 1 ? ` or more` : ` `} input fields has an error *`;
 

@@ -5,8 +5,6 @@ import App from 'App';
 import { theme } from 'theme';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from 'theme/globalStyles';
-// import { checkDB } from 'service/firebase/db';
-// checkDB();
 
 const root = document.getElementById('root');
 
