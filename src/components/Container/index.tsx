@@ -23,5 +23,6 @@ export const Container = styled.section<Props>`
   border-radius: ${({ br }) => br && `${br}px`};
   background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].hex};
   ${({ fd, flex }) => flex && fd && `flex-direction: ${fd}`};
-  ${({ theme, bp }) => theme.breakpoints[bp] && `@media (max-width: ${theme.breakpoints[bp]}){width: 90vw}`};
+  ${({ theme, bp }) =>
+    theme.breakpoints[bp] && `@media (max-width: ${theme.breakpoints[bp]}){width: 90vw; height: 80vh}`};
 `;

@@ -21,5 +21,7 @@ export const Box = styled.div<Props>`
   background-color: ${({ theme, bgc, opacity }) =>
     opacity ? `rgba(${theme.colors[bgc].rgb}, ${opacity})` : theme.colors[bgc].hex};
   box-shadow: ${({ theme }) => theme.boxShadow};
-  ${({ theme, bp }) => theme.breakpoints[bp] && `@media (max-width: ${theme.breakpoints[bp]}){width: 90vw}`};
+  ${({ theme, bp }) =>
+    theme.breakpoints[bp] &&
+    `@media (max-width: ${theme.breakpoints[bp]}){width: 90vw; height: fit-content; padding: 25px}`};
 `;
