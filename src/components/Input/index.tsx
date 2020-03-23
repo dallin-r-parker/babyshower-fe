@@ -25,7 +25,6 @@ export const Input: React.FC<Props> = (props): JSX.Element => {
 };
 
 const Wrapper = styled.div<{ error: any }>`
-  /* border: 1px solid red; */
   width: 100%;
   margin-bottom: 20px;
   display: flex;
@@ -41,15 +40,18 @@ const Wrapper = styled.div<{ error: any }>`
     width: 100%;
     height: 50px;
     border: none;
-    outline: ${({ error }) => error && `3px solid #ff6961`};
+    outline: ${({ error, theme }) => error && `3px solid ${theme.colors['errorRed'].hex}`};
     font-size: 26px;
     line-height: 20px;
     font-family: inherit;
     letter-spacing: 0.25px;
     padding-left: 5px;
+    border-radius: 5px;
 
     &:focus {
-      outline: 3px solid ${({ error }) => (error ? '#ff6961' : '#4d84e2')};
+      outline: 3px solid
+        ${({ error, theme }) =>
+          error ? `${theme.colors['errorRed'].hex}` : `${theme.colors['focusBlue'].hex}`};
     }
   }
 `;

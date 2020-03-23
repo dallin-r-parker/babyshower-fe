@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Input } from 'components/Input';
 import { ErrorMessage } from 'components/ErrorMessage';
+import { Button } from 'components/Button';
 
 export const Form: React.FC = (): JSX.Element => {
   const { register, handleSubmit, errors } = useForm();
@@ -26,7 +27,7 @@ export const Form: React.FC = (): JSX.Element => {
         <Input name="favStar" label="your favorite constellation" errors={errors} register={register} />
         <Input name="celebTwin" label="your celebrity looka-like" errors={errors} register={register} />
         <ErrorMessage error={errors} />
-        <input type="submit" />
+        <Button type="submit" h="15px" w="100px" bgc="darkGray" />
       </form>
     </>
   );
