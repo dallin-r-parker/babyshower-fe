@@ -9,7 +9,7 @@ interface Props {
   bgc?: string;
   flex?: boolean;
   fd?: string;
-  jc?: CSS.JustifyConent;
+  jc?: CSS.JustifyContent;
   center?: boolean;
   bp?: string;
   pos?: string;

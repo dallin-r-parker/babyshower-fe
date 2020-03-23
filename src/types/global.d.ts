@@ -2,5 +2,5 @@ type FlexAlignmentValues = 'center' | 'start' | 'end' | 'flex-start' | 'flex-end
 
 type FlexDistributedValues = 'space-between' | 'space-around' | 'space-evenly' | 'stretch';
 declare namespace CSS {
-  type JustifyConent = FlexAlignmentValues | FlexDistributedValues;
+  type JustifyContent = FlexAlignmentValues | FlexDistributedValues;
 }
