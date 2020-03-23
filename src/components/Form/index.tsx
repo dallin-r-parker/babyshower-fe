@@ -3,14 +3,13 @@ import { useForm } from 'react-hook-form';
 import { Input } from 'components/Input';
 import { ErrorMessage } from 'components/ErrorMessage';
 import { Button } from 'components/Button';
+import { setData } from 'service/firebase/db';
 
 export const Form: React.FC = (): JSX.Element => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, setError } = useForm();
   const onSubmit = (data: any) => {
-    console.log(data);
+    setData(data, setError);
   }; // your form submit function which will invoke after successful validation
-
-  //console.log(watch('fullname')); // you can watch individual input by pass the name of the input
 
   return (
     <>
@@ -21,7 +20,7 @@ export const Form: React.FC = (): JSX.Element => {
           name="email"
           label="Email"
           errors={errors}
-          validate={{ pattern: /^\S+@\S+$/i }}
+          validate={{ pattern: /^\S+@\S+$/i }} //should add better pattern func
           register={register}
         />
         <Input name="favStar" label="your favorite constellation" errors={errors} register={register} />
