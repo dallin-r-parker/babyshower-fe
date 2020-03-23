@@ -5,7 +5,7 @@ import { Container } from '../Container';
 
 export const Decorations: React.FC = (): JSX.Element => (
   <Container h="100vh" w="100vw" pos="absolute" z="1">
-    <Star t="1" r="0" />
+    <Star t="-23" r="7" />
     <Star t="10" r="25" />
     <Star t="17" r="80" />
     <Star t="33" r="45" />

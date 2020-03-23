@@ -21,23 +21,25 @@ export const CursiveStyle = styled.h1`
   font-family: Sacramento;
   font-size: 80px;
   color: gold;
-  transform: rotate(330deg);
-  top: -10vw;
+  transform: rotate(345deg);
+  top: -7vw;
   left: -10vw;
   z-index: 13;
   animation: ${animate} 4s infinite alternate-reverse;
 
-  ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){transform: rotate(350deg);}`};
+  ${({ theme }) =>
+    `@media (max-width: ${theme.breakpoints['tablet']}){transform: rotate(350deg); top: -10vh}`};
 `;
 
 export const CustomTable = styled.table`
   width: 45vw;
-  border: 1px solid black;
+
   margin: 0 auto;
   background-color: white;
   opacity: 0.65;
   font-size: 22px;
   padding: 0px 40px;
+  border-radius: 10px;
   ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){width: 90%}`};
   &&& {
     table,

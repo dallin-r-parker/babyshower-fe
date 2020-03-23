@@ -19,7 +19,7 @@ export interface Colors {
 export type themeColors = keyof typeof colors;
 
 export const colors = {
-  white: { hex: '#ffffff', gradient: null },
+  white: { hex: '#ffffff', gradient: null, rgb: '255,255,255' },
   silver: { hex: '#C5C6C5', gradient: null },
   lightGray: { hex: '#d3d3d3', gradient: null },
   darkGray: { hex: '#9a9c9a', gradient: null },
