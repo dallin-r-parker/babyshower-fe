@@ -15,7 +15,6 @@ export const Star = styled.div<Props>`
   margin-left: 0.9em;
   margin-right: 0.9em;
   margin-bottom: 1.2em;
-
   border-right: 0.3em solid transparent;
   border-bottom: 0.7em solid #fc0;
   border-left: 0.3em solid transparent;
@@ -57,5 +56,23 @@ export const Star = styled.div<Props>`
     border-left: 1em solid transparent;
 
     transform: rotate(35deg);
+  }
+
+  @keyframes blink-medium {
+    0% {
+      box-shadow: $bxshadow-medium;
+    }
+    70% {
+      $colors: '#fff', 'transparent';
+      $stars: $bxshadow-medium;
+      @for $i from 1 to length($stars) {
+        $star: set-nth(nth($stars, $i), 3, unquote(nth($colors, random(length($colors)))));
+        $stars: set-nth($stars, $i, $star);
+      }
+      box-shadow: $stars;
+    }
+    100% {
+      box-shadow: $bxshadow-medium;
+    }
   }
 `;

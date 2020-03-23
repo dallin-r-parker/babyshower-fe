@@ -6,7 +6,7 @@ import { Decorations } from './components/Decorations';
 import { Heading } from './components/Heading';
 
 const App: React.FC = (): JSX.Element => (
-  <Container flex h="100vh" w="100vw" jc="center" fd="column">
+  <Container flex h="100%" w="100vw" jc="center" fd="column">
     <Decorations />
     <Heading />
     <Container m="20px auto" h="auto" w="auto" flex fd="column" z="2">

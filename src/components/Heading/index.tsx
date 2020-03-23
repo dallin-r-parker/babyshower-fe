@@ -1,6 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Container } from '../Container';
+import { colors } from 'theme/colors';
+
+const animate = keyframes`
+0% {
+    color: ${colors.gold.gradient};
+}
+
+40% {
+    color:${colors.white.hex};
+}
+
+100% {
+    color: ${colors.gold.gradient};
+}`;
 
 export const CursiveStyle = styled.h1`
   position: relative;
@@ -11,8 +25,22 @@ export const CursiveStyle = styled.h1`
   top: -100px;
   left: 10vw;
   z-index: 13;
-  ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){width: 90vw; top: 20px;
+  animation: ${animate} 4s infinite alternate-reverse;
+
+  ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){width: 90vw; top:50px;
   left: -2vw; transform: rotate(350deg);}`};
+  @keyframes mymove {
+    0% {
+      top: 0px;
+      background: red;
+      width: 100px;
+    }
+    100% {
+      top: 200px;
+      background: yellow;
+      width: 300px;
+    }
+  }
 `;
 
 export const CustomTable = styled.table`
@@ -21,6 +49,8 @@ export const CustomTable = styled.table`
   margin: 0 auto;
   background-color: white;
   opacity: 0.65;
+  font-size: 22px;
+  padding: 0px 20px;
   ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){width: 90vw}`};
   &&& {
     table,
@@ -44,18 +74,22 @@ export const CustomTable = styled.table`
 `;
 
 export const Heading: React.FC = (): JSX.Element => (
-  <Container h="100vh" w="100vw" jc="center" pos="relative" z="13">
-    <h1 style={{ textAlign: 'center', padding: '20px', paddingTop: '120px', fontWeight: `bold` }}>
+  <Container h="auto" w="auto" jc="center" z="13" p={20}>
+    <h1 style={{ textAlign: 'center', fontWeight: `bold` }}>
       twinkle,
       <br /> twinkle, <br />
       little star
     </h1>
-    <h2 style={{ textAlign: 'center' }}>you're invited </h2>
+    <h2 style={{ textAlign: 'center', padding: '10px', fontFamily: `Sacramento`, fontSize: `32px` }}>
+      you're invited{' '}
+    </h2>
 
     <CustomTable>
       <tr>
         <th>WHAT:</th>
-        <td>Mikayda's VIRTUAL baby shower</td>
+        <td>
+          Mikayda Parker's <span style={{ fontWeight: 'bold' }}>VIRTUAL</span> baby shower
+        </td>
       </tr>
       <tr>
         <th>WHEN:</th>
@@ -63,18 +97,23 @@ export const Heading: React.FC = (): JSX.Element => (
       </tr>
       <tr>
         <th>WHERE:</th>
-        <td>The comfort of your home computer</td>
+        <td>
+          From the comfort of your home computer<span>&#42;</span>
+        </td>
       </tr>
       <tr>
-        <th>WHERE:</th>
-        <td>Because we all need some games, chatting, celebration, and good cheer</td>
+        <th>WHY:</th>
+        <td>
+          Even though we are social distancing, we can still celebrate together with{' '}
+          <span style={{ fontWeight: 'bold' }}>games, chatting, and good cheer</span>.
+        </td>
       </tr>
       <tr>
         <th>HOW:</th>
         <td>
-          Google Hangouts - contact Dallin (
+          Google Hangouts. Contact Dallin (
           <a href="mailto: dallin.r.parker@gmail.com">dallin.r.parker@gmail.com </a>) if you need help setting
-          up your personal machine
+          up your personal device.
         </td>
       </tr>
     </CustomTable>

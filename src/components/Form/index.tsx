@@ -27,7 +27,10 @@ export const Form: React.FC = (): JSX.Element => {
         <ErrorMessage error={errors} />
         <Button type="submit" h="15px" w="100px" bgc="white" color="roseGold" />
       </form>
-      <h4 style={{ paddingTop: `10px` }}>Submit this form to receive a confirmation/instruction email </h4>
+      <h4 style={{ paddingTop: `10px` }}>
+        <span>&#42;</span>Submit this form and be on the lookout for an instruction/confirmation email within
+        the next few days.{' '}
+      </h4>
     </>
   );
 };
