@@ -41,7 +41,7 @@ export const CustomTable = styled.table`
   padding: 0px 40px;
   border-radius: 10px;
   ${({ theme }) => `@media (max-width: ${theme.breakpoints['tablet']}){width: 90%}`};
-  &&& {
+  & {
     table,
     th,
     td {
@@ -52,7 +52,7 @@ export const CustomTable = styled.table`
     th,
     td,
     tr {
-      padding: 10px;
+      padding: 15px 20px;
     }
     th {
       text-align: left;
@@ -81,39 +81,41 @@ export const Heading: React.FC = (): JSX.Element => (
       you're invited{' '}
     </h2>
     <CustomTable>
-      <tr>
-        <th>WHAT:</th>
-        <td>
-          Mikayda Parker's <span style={{ fontWeight: 'bold' }}>VIRTUAL</span> baby shower
-        </td>
-      </tr>
-      <tr>
-        <th>WHEN:</th>
-        <td>Saturday, March 28, 2020 at 2:00 PM EST</td>
-      </tr>
-      <tr>
-        <th>WHERE:</th>
-        <td>From the comfort of your home computer.</td>
-      </tr>
-      <tr>
-        <th>WHY:</th>
-        <td>
-          Even though we are social distancing, we can still celebrate together with{' '}
-          <span style={{ fontWeight: 'bold' }}>games, chatting, and good cheer</span>.
-        </td>
-      </tr>
-      <tr>
-        <th>HOW:</th>
-        <td>
-          You will need to download{' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://zoom.us/download">
-            Zoom
-          </a>{' '}
-          and have a webcam on your device. Contact Dallin (
-          <a href="mailto: dallin.r.parker@gmail.com">dallin.r.parker@gmail.com</a>) if you need help setting
-          up your personal device.
-        </td>
-      </tr>
+      <tbody>
+        <tr>
+          <th>WHAT:</th>
+          <td>
+            Mikayda Parker's <span style={{ fontWeight: 'bold' }}>VIRTUAL</span> baby shower
+          </td>
+        </tr>
+        <tr>
+          <th>WHEN:</th>
+          <td>Saturday, March 28, 2020 at 2:00 PM EST</td>
+        </tr>
+        <tr>
+          <th>WHERE:</th>
+          <td>From the comfort of your home computer.</td>
+        </tr>
+        <tr>
+          <th>WHY:</th>
+          <td>
+            Even though we are social distancing, we can still celebrate together with{' '}
+            <span style={{ fontWeight: 'bold' }}>games, chatting, and good cheer</span>.
+          </td>
+        </tr>
+        <tr>
+          <th>HOW:</th>
+          <td>
+            You will need to download{' '}
+            <a target="_blank" rel="noopener noreferrer" href="https://zoom.us/download">
+              Zoom
+            </a>{' '}
+            and have a webcam on your device. Contact Dallin (
+            <a href="mailto: dallin.r.parker@gmail.com">dallin.r.parker@gmail.com</a>) if you need help
+            setting up your personal device.
+          </td>
+        </tr>
+      </tbody>
     </CustomTable>
   </Container>
 );

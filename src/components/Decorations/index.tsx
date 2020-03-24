@@ -14,6 +14,7 @@ export const Decorations: React.FC = (): JSX.Element => (
     <Star t="66" r="15" />
     <Star t="83" r="33" />
     <Star t="90" r="90" />
+
     <Cloud t="10" r="10" />
     <Cloud t="70" r="65" />
   </Container>
