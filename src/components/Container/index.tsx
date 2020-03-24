@@ -9,11 +9,14 @@ interface Props {
   bgc?: string;
   flex?: boolean;
   fd?: string;
-  jc?: CSS.JustifyConent;
+  jc?: CSS.JustifyContent;
   center?: boolean;
   bp?: string;
   pos?: string;
   z?: string;
+  oy?: string;
+  ox?: string;
+  m?: string;
 }
 
 export const Container = styled.section<Props>`
@@ -22,6 +25,7 @@ export const Container = styled.section<Props>`
   height: ${({ h }) => h};
   justify-content: ${({ jc }) => jc && 'center'};
   padding: ${({ p }) => p && `${p}px`};
+  margin: ${({ m }) => m};
   border-radius: ${({ br }) => br && `${br}px`};
   background-color: ${({ theme, bgc }) => bgc && theme.colors[bgc].hex};
   position: ${({ pos }) => pos};
@@ -29,4 +33,6 @@ export const Container = styled.section<Props>`
   ${({ fd, flex }) => flex && fd && `flex-direction: ${fd}`};
   ${({ theme, bp }) =>
     theme.breakpoints[bp] && `@media (max-width: ${theme.breakpoints[bp]}){width: 90vw; height: 80vh}`};
+  overflow-y: ${({ oy }) => oy};
+  overflow-x: ${({ ox }) => ox};
 `;

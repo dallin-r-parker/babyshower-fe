@@ -4,6 +4,7 @@ import { Input } from 'components/Input';
 import { ErrorMessage } from 'components/ErrorMessage';
 import { Button } from 'components/Button';
 import { setData } from 'service/firebase/db';
+import { CursiveStyle } from 'components/Heading';
 
 export const Form: React.FC = (): JSX.Element => {
   const { register, handleSubmit, errors, setError } = useForm();
@@ -13,7 +14,7 @@ export const Form: React.FC = (): JSX.Element => {
 
   return (
     <>
-      {/* <h2>RSVP</h2> */}
+      <CursiveStyle>RSVP</CursiveStyle>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input name="fullname" label="Full Name" register={register} errors={errors} autofocus />
         <Input
@@ -26,8 +27,12 @@ export const Form: React.FC = (): JSX.Element => {
         <Input name="favStar" label="your favorite constellation" errors={errors} register={register} />
         <Input name="celebTwin" label="your celebrity look-alike" errors={errors} register={register} />
         <ErrorMessage error={errors} />
-        <Button type="submit" h="15px" w="100px" bgc="darkGray" />
+        <Button type="submit" h="15px" w="100px" bgc="white" color="roseGold" />
       </form>
+      <h4 style={{ paddingTop: `10px` }}>
+        <span>&#42;</span>Submit this form and be on the lookout for an instruction/confirmation email within
+        the next few days.{' '}
+      </h4>
     </>
   );
 };

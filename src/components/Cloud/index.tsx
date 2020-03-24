@@ -6,7 +6,6 @@ interface Props {
 }
 
 export const Cloud = styled.div<Props>`
-  margin-top: 100px;
   background: #fff;
   background: linear-gradient(top, #fff 5%, #f1f1f1 100%);
   border-radius: 100px;
