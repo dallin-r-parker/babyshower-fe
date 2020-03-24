@@ -93,9 +93,7 @@ export const Heading: React.FC = (): JSX.Element => (
       </tr>
       <tr>
         <th>WHERE:</th>
-        <td>
-          From the comfort of your home computer<span>&#42;</span>
-        </td>
+        <td>From the comfort of your home computer.</td>
       </tr>
       <tr>
         <th>WHY:</th>
@@ -111,7 +109,7 @@ export const Heading: React.FC = (): JSX.Element => (
           <a target="_blank" rel="noopener noreferrer" href="https://zoom.us/download">
             Zoom
           </a>{' '}
-          onto your device. Contact Dallin (
+          and have a webcam on your device. Contact Dallin (
           <a href="mailto: dallin.r.parker@gmail.com">dallin.r.parker@gmail.com</a>) if you need help setting
           up your personal device.
         </td>
