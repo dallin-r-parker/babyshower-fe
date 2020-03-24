@@ -107,7 +107,11 @@ export const Heading: React.FC = (): JSX.Element => (
       <tr>
         <th>HOW:</th>
         <td>
-          Google Hangouts. Contact Dallin (
+          You will need to download{' '}
+          <a target="_blank" rel="noopener noreferrer" href="https://zoom.us/download">
+            Zoom
+          </a>{' '}
+          onto your device. Contact Dallin (
           <a href="mailto: dallin.r.parker@gmail.com">dallin.r.parker@gmail.com</a>) if you need help setting
           up your personal device.
         </td>

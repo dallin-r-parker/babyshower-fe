@@ -64,5 +64,8 @@ export const GlobalStyles = createGlobalStyle`
     font-family: inherit;
   }
 
+  a{
+    color: #4d84e2;
+  }
 
 `;

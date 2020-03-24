@@ -14,7 +14,7 @@ export const Registry: React.FC = (): JSX.Element => (
       are registered here:
       <br />
       <br />
-      <a href="https://www.babylist.com/baby-reg-mikayda" target="blank">
+      <a href="https://www.babylist.com/baby-reg-mikayda" target="_blank" rel="noopener noreferrer">
         <img
           alt=""
           height="30"
