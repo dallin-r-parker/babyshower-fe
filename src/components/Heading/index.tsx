@@ -64,22 +64,6 @@ export const CustomTable = styled.table`
 
 export const Heading: React.FC = (): JSX.Element => (
   <Container h="auto" w="auto" jc="center" z="13">
-    <h1 style={{ textAlign: 'center', fontWeight: `bold`, paddingTop: `20px`, paddingBottom: `20px` }}>
-      twinkle,
-      <br /> twinkle, <br />
-      little star
-    </h1>
-    <h2
-      style={{
-        textAlign: 'center',
-        padding: '10px',
-        paddingBottom: '30px',
-        fontFamily: `Sacramento`,
-        fontSize: `40px`
-      }}
-    >
-      you're invited{' '}
-    </h2>
     <CustomTable>
       <tbody>
         <tr>
