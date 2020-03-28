@@ -3,7 +3,6 @@ import { Container } from './components/Container';
 import { Box } from './components/Box';
 import { Form } from './components/Form';
 import { Decorations } from './components/Decorations';
-import { Heading } from './components/Heading';
 import { Registry } from './components/Registry';
 
 const App: React.FC = (): JSX.Element => (
